@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(document).on("change","#show-hide",function(ev){
+				ev.preventDefault();
+				$("#tab-all").show();
+				$("#tab1").show();
+				$("#tab2").show();
+				var val = $('#show-hide').val();
+				if(val == 1)
+					$("#tab1").hide();
+				else if(val == 2)
+					$("#tab2").hide();
+				
+				else{
+					$("#tab1").hide();
+					$("#tab2").hide();
+				}
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Show/Hide Div Example</h2>
+	<select name="show-hide" id="show-hide">
+		<option value=''>Select</option>
+		<option value='1'>Hide tab1</option>
+		<option value='2'>Hide tab2</option>
+	</select>
+	
+	<div id="tab-all" style="display:none">
+		<div id="tab1">
+			<h4>Tab1</h4>
+		</div>
+		<div id="tab2">
+			<h4>Tab2</h4>
+		</div>
+	</div>
+</body>
+</html>
