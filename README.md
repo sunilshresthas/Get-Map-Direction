@@ -1,2 +1,2 @@
-# testonly
-Test only is the Repository for showing here sample php codes.
+# Get Direction 
+This is the code for getting direction.
